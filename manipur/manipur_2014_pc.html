@@ -19,8 +19,8 @@ body {
     font-weight: normal;
     line-height: 24px;
     width: 570px;
-    height: 320px;
-    border: 1px solid #4f504f;
+    height: 500px;
+    border: 0px solid #4f504f;
     padding: 4px 4px 0px 4px;
 }
 
@@ -53,7 +53,7 @@ div.boxed{
     padding: 6px 20px;
     background-color: #4f504f;
     background-image: linear-gradient(to bottom, #606160, #070807);
-    margin:5px 14px 1px 14px;
+    margin:5px 45px 1px 45px;
     float:left;
 }
 
@@ -72,7 +72,7 @@ div.boxed:active{
     padding: 6px 20px;
     background-color: #4f504f;
     background-image: linear-gradient(to bottom, #606160, #070807);
-    margin:5px 14px 1px 14px;
+    margin:5px 45px 1px 45px;
     float:left;
 }
 
@@ -86,19 +86,19 @@ div.boxed:active{
 
 <p style="margin:2px 4px 2px 4px;line-height:16px;color:#4f504f;font-weight:bold;font-size:16px;text-align:center;">MANIPUR IN THE 2014 NATIONAL ELECTION</p>
 
-  <div style="width:365px;height:250px;" id="chart"></div>
-  <div style="width:365px;height:95px;" id="chart2"></div>
+  <div style="width:365px;height:225px;" id="chart"></div>
+  <div style="width:500px;height:95px;" id="chart2"></div>
 
   <script type="text/javascript">
 
     var w = 365;
-    var h = 250;
+    var h = 225;
 
     var map = d3.select("#chart")
                       .append("svg:svg")
                       .attr("width", w)
                       .attr("height", h)
-                      .style("margin", "0px 4px 0px 4px")
+                      .style("margin", "0px 90px 0px 90px")
                       .style("background","#4f504f");
 
 d3.json("../data/manipur_new_reduced.geojson", function (json) {
@@ -120,7 +120,7 @@ var pathx = d3.geoPath().projection(proj);
 
 var map2 =  d3.select("#chart2")
               .append("svg:svg")
-              .attr("width", w)
+              .attr("width", "500px")
               .attr("height", "200px")
               .style("margin", "10px 4px 0px 4px")
               .append("svg:g");
@@ -133,7 +133,7 @@ var map2 =  d3.select("#chart2")
         .attr('width', '75')
         .attr('class','shadow partyButton')
         .attr('id','incButton')
-        .attr("x", "0")             
+        .attr("x", "100")             
         .attr("y", "0")    
         .on("click", function(){
             d3.selectAll('.line:not(.incLine)').style('opacity', "0");
@@ -185,7 +185,7 @@ var map2 =  d3.select("#chart2")
 
         map2
           .append("text")
-          .attr("x", "25")             
+          .attr("x", "125")             
           .attr("y", "95")    
           .text("INC")
           .style("fill","#4f504f")
@@ -199,7 +199,7 @@ var map2 =  d3.select("#chart2")
             .attr('width', '75')
             .attr('class','shadow partyButton')
             .attr('id','npfButton')
-            .attr("x", "90")             
+            .attr("x", "190")             
             .attr("y", "0")    
           .on("click", function(){
             d3.selectAll('.line:not(.npfLine)').style('opacity', "0");
@@ -251,7 +251,7 @@ var map2 =  d3.select("#chart2")
 
         map2
             .append("text")
-            .attr("x", 115)             
+            .attr("x", 215)             
             .attr("y", 95)    
             .text("NPF")
             .style("fill","#4f504f")
@@ -266,7 +266,7 @@ var map2 =  d3.select("#chart2")
         .attr('width', '75')
         .attr('class','shadow partyButton')
         .attr('id','bjpButton')
-        .attr("x", "180")            
+        .attr("x", "280")            
         .attr("y", "0")    
         .on("click", function(){
             d3.selectAll('.line:not(.bjpLine)').style('opacity', "0");
@@ -317,7 +317,7 @@ var map2 =  d3.select("#chart2")
 
       map2
         .append("text")
-        .attr("x", "205")             
+        .attr("x", "305")             
         .attr("y", "95")    
         .text("BJP")
         .style("fill","#4f504f")
@@ -330,7 +330,7 @@ var map2 =  d3.select("#chart2")
         .attr('width', '75')
         .attr('class','shadow partyButton')
         .attr('id','cpiButton')
-        .attr("x", "270")            
+        .attr("x", "370")            
         .attr("y", "0")    
         .on("click", function(){
             d3.selectAll('.line:not(.cpiLine)').style('opacity', "0");
@@ -382,7 +382,7 @@ var map2 =  d3.select("#chart2")
 
         map2
           .append("text")
-          .attr("x", "295")             
+          .attr("x", "395")             
           .attr("y", "95")    
           .text("CPI")
           .style("fill","#4f504f")
@@ -393,7 +393,7 @@ var map2 =  d3.select("#chart2")
 
   </script>
 
-<p style="margin:20px 4px 1px 4px;color:#4f504f;font-weight:normal;font-size:16px;text-align:left;">If the results of the last national election in 2014 are broken down by state legislative seats, the INC (Indian National Congress) would have won a majority with 38 seats. After the INC, the NPF (Naga Peoples Front) won 9 seats in Outer Manipur, winning in Tamenglong to the east, Senapati and Ukhrul to the north and Chandel to the south.</p>
+<p style="margin:20px 4px 1px 4px;color:#4f504f;font-weight:normal;font-size:16px;text-align:left;">If the results of the 2014 national election are broken down by state legislative seats, the INC (Indian National Congress) would win a majority with 38 seats. The NPF (Naga Peoples Front) would win 9 seats in Tamenglong to the east, Senapati and Ukhrul to the north and Chandel to the south.</p>
 
 <a href="../homepage.html"><div class="boxed">HOME</div></a><a href="../state_index.html"><div class="boxed">STATES</div></a><a href="manipur_questions.html"><div class="boxed">MANIPUR</div></a>
 

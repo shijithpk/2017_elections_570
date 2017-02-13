@@ -17,8 +17,8 @@ body {
     font-weight: normal;
     line-height: 24px;
     width: 570px;
-    height: 320px;
-    border: 1px solid #4f504f;
+    height: 500px;
+    border: 0px solid #4f504f;
     padding: 4px 8px 2px 8px;
 }
 
@@ -61,7 +61,7 @@ div.boxed{
     padding: 6px 20px;
          background-color: #4f504f;
     background-image: linear-gradient(to bottom, #606160, #070807);
-    margin:15px 14px 1px 14px;
+    margin:5px 45px 1px 45px;
     float:left;
 }
 
@@ -81,7 +81,7 @@ div.boxed:active{
     
     background-color: #4f504f;
     background-image: linear-gradient(to bottom, #606160, #070807);
-    margin:5px 14px 1px 14px;
+    margin:5px 45px 1px 45px;
     float:left;
 }
 </style>
@@ -95,8 +95,8 @@ div.boxed:active{
 
 //much of the code is from d3noob.org (http://www.d3noob.org/2014/05/show-hide-d3js-element-by-clicking-on.html) and stackoverflow
 
-var	margin = {top: 20, right: 20, bottom: 150, left: 32}, 
-	width = 375 - margin.left - margin.right,
+var	margin = {top: 20, right: 102, bottom: 150, left: 102}, 
+	width = 570 - margin.left - margin.right,
 	height = 350 - margin.top - margin.bottom;
 
 var	parseDate = d3.time.format("%Y").parse;
@@ -317,7 +317,7 @@ svg.selectAll(".tick text").attr("fill","#4f504f");
 });
 
 </script>
-<p style="margin:0px 4px 1px 4px;color:#4f504f;font-weight:normal;font-size:16px;text-align:left;">Uttarakhand is a state that was formed from splitting Uttar Pradesh back in 2000. Because of that it doesn't have a long electoral history as an independent state--there have been three elections over the past 16 years. In that time, the BSP (Bahujan Samaj Party) has made inroads into Uttarakhand politics despite the INC-BJP dominance.</p>
+<p style="margin:0px 4px 1px 4px;color:#4f504f;font-weight:normal;font-size:16px;text-align:left;">Uttarakhand was formed from splitting Uttar Pradesh back in 2000. Because of that it doesn't have a long electoral history as an independent state. There have been three elections over the past 16 years with either the INC or BJP dominant.</p>
 
 <a href="../homepage.html"><div class="boxed">HOME</div></a><a href="../state_index.html"><div class="boxed">STATES</div></a><a href="uttarakhand_questions.html"><div class="boxed">U'KHAND</div>
 
