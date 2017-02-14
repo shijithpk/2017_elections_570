@@ -37,9 +37,8 @@ line{
   }
 
 .shadow {
-    -webkit-filter: drop-shadow( 5px 5px 5px #000 );
-            filter: drop-shadow( 5px 5px 5px #000 );
-}    
+filter: url(#drop-shadow);
+}
 
 div.boxed{
     display: inline-block;
@@ -128,12 +127,21 @@ var pathx = d3.geoPath().projection(proj);
         .style("opacity","1")
         .style("stroke-width", "1");
 
+
+
+
 var map2 =  d3.select("#chart2")
               .append("svg:svg")
               .attr("width", "500px")
               .attr("height", "200px")
               .style("margin", "10px 4px 0px 4px")
               .append("svg:g");
+
+
+d3.xml("../exp_buttons/shadow.svg").mimeType("image/svg+xml").get(function(error, xml) {
+  if (error) throw error;
+  document.body.appendChild(xml.documentElement);
+});
 
 
     map2

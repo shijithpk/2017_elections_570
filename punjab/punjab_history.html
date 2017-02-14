@@ -47,10 +47,8 @@ body {
 	}
 
 .shadow {
-    -webkit-filter: drop-shadow( 5px 5px 5px #000 );
-            filter: drop-shadow( 5px 5px 5px #000 );
+filter: url(#drop-shadow);
 }
-
 
 
 div.boxed{
@@ -105,6 +103,11 @@ div.boxed:active{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
 
 <script>
+
+d3.xml("../exp_buttons/shadow.svg").mimeType("image/svg+xml").get(function(error, xml) {
+  if (error) throw error;
+  document.body.appendChild(xml.documentElement);
+});
 
 //much of the code is from d3noob.org (http://www.d3noob.org/2014/05/show-hide-d3js-element-by-clicking-on.html) and stackoverflow
 

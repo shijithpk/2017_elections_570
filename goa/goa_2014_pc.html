@@ -37,8 +37,7 @@ line{
   }
 
 .shadow {
-    -webkit-filter: drop-shadow( 5px 5px 5px #000 );
-            filter: drop-shadow( 5px 5px 5px #000 );
+filter: url(#drop-shadow);
 }    
 
 div.boxed{
@@ -136,6 +135,10 @@ var map2 =  d3.select("#chart2")
               .style("margin", "10px 4px 0px 4px")
               .append("svg:g");
 
+d3.xml("../exp_buttons/shadow.svg").mimeType("image/svg+xml").get(function(error, xml) {
+  if (error) throw error;
+  document.body.appendChild(xml.documentElement);
+});
 
     map2
         .append("svg:image")
